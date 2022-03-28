@@ -6,3 +6,16 @@ p{
     height: 20px;
     width: 22px;
 }
+html{
+    height: 100%;
+    width: 100%
+
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+#container{
+    height: 100vh;
+    width: 100vw;
+}
