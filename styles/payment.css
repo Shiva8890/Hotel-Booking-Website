@@ -15,8 +15,33 @@ html{
 body{
     height: 100%;
     width: 100%;
+    background-color: #e0e0e0;
+    margin: 0%;
 }
-#container{
-    height: 100vh;
-    width: 100vw;
+#radissondetails{
+    background-color: rgb(132, 136, 139);
+    height: 20%;
+    width: 50%;
+    margin: 2% auto;
+}
+
+#userdetails{
+    margin: 2%;
+}
+
+#Tariffdetails{
+    margin: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2% 2%;
+}
+header{
+    background-color: rosybrown;
+    margin: 0px;
+    padding: 0px;
+}
+footer{
+    background-color: rosybrown;
+    margin: 0%;
+    padding: 0%;
 }

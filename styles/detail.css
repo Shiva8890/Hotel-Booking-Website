@@ -14,8 +14,36 @@ html{
 body{
     height: 100%;
     width: 100%;
+    background-color: #e0e0e0;
+    margin: 0%;
 }
 #container{
     height: 100vh;
     width: 100vw;
+}
+header{
+    background-color: rosybrown;
+    margin: 0px;
+    padding: 0px;
+}
+footer{
+    background-color: rosybrown;
+    margin: 0%;
+    padding: 0%;
+}
+ .radisson{
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+} 
+.form{
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 1%;
+}
+.description{
+    margin-top: 1%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 2%;
 }

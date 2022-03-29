@@ -1,10 +1,5 @@
 
 
-
-p{
-    margin: 0%;
-}
-
 .places{
 
     height: 150px;
@@ -14,3 +9,39 @@ p{
     height: 20px;
     width: 22px;
 }
+body{
+    background-color: #e0e0e0;
+    margin: 0%;
+}
+#header{
+    background-color: rosybrown;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg-img{ /* The image used */
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+    
+    min-height: 380px;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cities {
+    margin-left: 15%;
+    margin-right: 15%;
+    
+}
+.places{
+    padding: 4%;
+    border-radius: 25%;
+}
+#footer{
+    background-color: rosybrown;
+    margin: 0%;
+    padding: 0%;
+}
+
+
