@@ -14,25 +14,43 @@
            </div>
         </header>
         <div id="contentdiv">
-              <div class="radisson">
-                 <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" height="500px" width="500px" /><br>
-              </div>
-      
-            <div class="form">
+            <div id="registration">
+                <div id="radisson">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"  style="max-height:350px;" /><br>
+                 </div>
+         
+               <div id="form">
                 <form action="payment.html" method="get">
-                    <label for="userA">Adults:</label>
-                    <input name="userA" required autocomplete="off" type="number" value="1" min="1"/><br>
-                    <label for="username">Name::</label>
-                    <input name="username" required autocomplete="off" type="text"/><br>
-                    <label for="userfromdate">From Date:</label>
-                    <input name="userfromdate" required autocomplete="off" type="date"/><br>
-                    <label for="usertodate">To Date:</label>
-                    <input name="usertodate" required autocomplete="off" type="date"/><br>
-                    <label for="usertotal">Total:</label>
-                    <input name="usertotal" type="text" disabled/><br>
-                    <input type="submit" value="Book Now"/>
-                </form>
-            </div>
+                     <ul style="list-style-type: none;">
+                         <li class="list-Style">
+                            <label class="label-Style" for="userA">Adults:</label>
+                            <input class="input-Style" name="userA" required autocomplete="off" type="number" value="1" min="1"/>
+                         </li>
+                         <li class="list-Style">
+                            <label class="label-Style" for="username">Name::</label>
+                            <input class="input-Style" name="username" required autocomplete="off" type="text"/><br>
+                         </li>
+                           <li class="list-Style">
+                            <label class="label-Style" for="userfromdate">From Date:</label>
+                            <input class="input-Style" name="userfromdate" required autocomplete="off" type="date"/>
+                           </li>
+                           <li class="list-Style">
+                            <label class="label-Style" for="usertodate">To Date:</label>
+                            <input class="input-Style" name="usertodate" required autocomplete="off" type="date"/>
+                           </li>
+                          <li class="list-Style">
+                            <label class="label-Style" for="usertotal">Total:</label>
+                            <input class="input-Style" name="usertotal" type="text" disabled/><br>
+                          </li>
+                           <li class="list-Style">  
+                            <input class="input-Style" type="submit" name="usersubmit" value="Book Now" style="transform: translate(200px); width: 100px;"/>
+                           </li>
+                       </ul>
+                       
+                   </form>
+               </div>
+        </div>
+              
             <div class="description">
                     <h3>Radisson Blu Hotel</h3>
                     <p>RATING</p><br>

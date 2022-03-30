@@ -45,13 +45,17 @@ ul > li >a{
         text-align: center;
     
 }
-#listofhotels{
+.radisson{
     display: flex;
-    margin: 10px;
-    /* padding: 20px; */
-    flex-wrap: wrap;
-    justify-content: space-between;
-
+    height: 200px;
+    background-color: lightgrey;
+    width: 94%;
+    margin: 4%;
+}
+#listofhotels{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 2%;
 }
 
 footer{
@@ -63,41 +67,70 @@ footer{
     align-items: center;
     width: 100%;
     height: 60px;
+    vertical-align: middle;
 }
 .social{
     height: 20px;
     width: 22px;
+    margin-right: 10px;
+    
 }
 #contactus > a{
     text-decoration: none;
     color: black;   
+    margin-left: 40px;
 }
-#copy > p{
+/* #copy > p{
     margin-bottom: 0%;
     margin-top: 18%;
+} */
+.radisson > a{
+    display: flex;
+    justify-content: space-between;
+}
+#Rd{
+    margin-left: 4%;
+}
+#Ld{
+    margin-left: 4%;
+}
+#Td{
+    margin-left: 4%;
+}
+.lalit{
+    display: flex;
+    justify-content: space-between;
 }
 
-#container > #listofhotels > .radisson{
-    margin: 2%;
-    width: 40%;
-    background-color: rgb(132,136,139);
+.taj{
+    display: flex;
+    justify-content: space-between;
 }
+
+/* #container > #listofhotels > .radisson{
+    margin: 2%;
+    width: 70%;
+    background-color: rgb(132,136,139);
+    margin-bottom: 20%;
+} */
 #container > #listofhotels > .radisson > a{
   text-decoration: none;
   color: black;
 }
 
-#container > #listofhotels > .lalit{
+/* #container > #listofhotels > .lalit{
     margin: 2%;
     width: 40%;
     background-color: rgb(132,136,139);
-}
+    margin-bottom: 20%;
+} */
 
-#container > #listofhotels > .taj{
+/* #container > #listofhotels > .taj{
     margin: 2%;
     width: 40%;
     background-color: rgb(132,136,139);
-}
+    margin-bottom: 20%;
+} */
 
 
 

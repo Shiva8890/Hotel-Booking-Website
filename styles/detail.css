@@ -39,6 +39,52 @@ header{
     vertical-align: middle;
     margin-left: 1%;
 }
+
+#registration{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 400px;
+    margin: 2% 2%;
+
+}
+#radisson{
+    display: flex;
+    flex-grow: 3;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+#form{
+    flex-grow: 1;
+    padding: 5px;
+    border-left: 0px;
+    border-top: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: black;
+}
+form{
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+.list-Style{
+    display: flex;
+    padding: 0.5em;
+}
+
+.label-Style{
+    flex: 1;
+}
+
+.input-Style{
+    width: 60%;
+}
+
 footer{
     background-color: rosybrown;
     position: sticky;
@@ -48,29 +94,35 @@ footer{
     align-items: center;
     width: 100%;
     height: 60px;
+    vertical-align: middle;
 }
 .social{
     height: 20px;
     width: 22px;
+    margin-right: 10px;
+    
 }
 #contactus > a{
     text-decoration: none;
     color: black;   
+    margin-left: 40px;
 }
-#copy > p{
+/* #copy > p{
     margin-bottom: 0%;
     margin-top: 18%;
-}
- .radisson{
-    margin-top: 2%;
-    margin-left: 4%;
-    margin-right: 4%;
+} */
+  #radisson{
+    /* margin-top: 2%; */
+    /* margin-left: 4%;
+    margin-right: 4%; */
+    border: 1px solid black;
 } 
-.form{
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-bottom: 1%;
-}
+#form{
+    /* margin-left: 4%;
+    margin-right: 4%; */
+    /* margin-bottom: 1%; */
+    border: 1px solid black;
+} 
 .description{
     margin-top: 1%;
     margin-left: 4%;

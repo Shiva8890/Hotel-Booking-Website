@@ -51,15 +51,69 @@ body{
     width: 400px;
     font-size: 16px;
     padding: 10px;
+    outline: none;
+        
 }
 .cities {
     margin-left: 15%;
     margin-right: 15%;
-    
+    /* margin-top: 2%; */
+    padding: 0%;
+    text-align: center;
+    margin: 2%;
+    display: flex;
+    justify-content: space-evenly;
 }
-.places{
-    padding: 4%;
+
+/* Hover start */
+.cities {
+    position: relative;
+    /* width: 50%; */
+  }
+  
+  .places {
+    display: block;
+    /* width: 100%;
+    height: auto; */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
     border-radius: 25%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .hov:hover .overlay {
+    opacity: 0.5;
+  }
+  .hov{
+      position: relative;
+  }
+  
+  .text {
+    color: #f1f1f1;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  /* hover end here */
+.places{
+    padding: 0%;
+    border-radius: 25%;
+    box-shadow: 10px 10px 10px grey;
+    
 }
 #viewmore{
     text-align: center;
@@ -78,16 +132,22 @@ footer{
     align-items: center;
     width: 100%;
     height: 60px;
+    vertical-align: middle;
+    
 }
 .social{
     height: 20px;
     width: 22px;
+    margin-right: 10px;
+    
 }
 #contactus > a{
     text-decoration: none;
     color: black;   
+    margin-left: 40px;
 }
-#copy > p{
+/* #copy > p{
     margin-bottom: 0%;
-    margin-top: 18%;
-}
+    margin-top: 18%; 
+     vertical-align: middle;
+} */
