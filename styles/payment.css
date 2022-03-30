@@ -76,7 +76,7 @@ header{
     text-decoration: none;
     color: black;
 }
-footer{
+.footer{
     background-color: rosybrown;
     position: sticky;
     bottom: 0%;

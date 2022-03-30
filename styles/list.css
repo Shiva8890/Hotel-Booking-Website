@@ -58,7 +58,7 @@ ul > li >a{
     margin: 2%;
 }
 
-footer{
+.footer{
     background-color: rosybrown;
     position: sticky;
     bottom: 0%;
@@ -87,6 +87,9 @@ footer{
 .radisson > a{
     display: flex;
     justify-content: space-between;
+}
+.radisson:hover{
+   background-color: rosybrown;
 }
 #Rd{
     margin-left: 4%;

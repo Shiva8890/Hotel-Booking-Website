@@ -85,9 +85,9 @@ form{
     width: 60%;
 }
 
-footer{
+.footer{
     background-color: rosybrown;
-    position: sticky;
+    position: fixed;
     bottom: 0%;
     display: flex;
     justify-content: space-between;
@@ -102,7 +102,7 @@ footer{
     margin-right: 10px;
     
 }
-#contactus > a{
+#contactus > {
     text-decoration: none;
     color: black;   
     margin-left: 40px;
