@@ -54,7 +54,7 @@ body{
     outline: none;
         
 }
-.cities {
+.cities1 {
     margin-left: 15%;
     margin-right: 15%;
     /* margin-top: 2%; */
@@ -63,14 +63,30 @@ body{
     margin: 2%;
     display: flex;
     justify-content: space-evenly;
+    bottom: 20px;
+    top: 30px;
+}
+
+.cities2 {
+  margin-left: 15%;
+  margin-right: 15%;
+  /* margin-top: 2%; */
+  padding: 0%;
+  text-align: center;
+  margin: 2%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 170px;
+  top: 100px;
+}
+.cities2 {
+  position: relative;
 }
 
 /* Hover start */
-.cities {
+.cities1 {
     position: relative;
-    /* width: 50%; */
-  }
-  
+}  
   .places {
     display: block;
     /* width: 100%;
@@ -119,9 +135,9 @@ body{
     text-align: center;
     margin-bottom: 30px;
 }
-#viewmore > a{
+#viewmore > button > a{
     text-decoration: none;
-    color: black;
+    color: white
 }
 .footer{
     background-color: rosybrown;
@@ -146,8 +162,8 @@ body{
     color: black;   
     margin-left: 40px;
 }
-/* #copy > p{
+#copy > p{
     margin-bottom: 0%;
-    margin-top: 18%; 
+    margin-top: 4%; 
      vertical-align: middle;
-} */
+}
