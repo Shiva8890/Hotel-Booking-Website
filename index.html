@@ -2,20 +2,20 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/common.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <script defer src="scripts/common.js"></script> 
+    
 </head>
 <body>
        <div id="container">
             <header id="header">
-                    <img class="logo" src="assests/images/logo.png" alt="logo"/>
-                        <button type="button" class="login" href="login.html" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                            Login 
-                        </button>
-                                  
+              <!-- connected with commonjs-->
             </header>
-           <div id="content">
+            
+            <div id="content">
                 <section id="search">
                     <form action="" id="searchBar">
                         <input type="text" placeholder="City">
@@ -52,7 +52,7 @@
                               </div>
                         </div>           
             </div>
-            <div class="cities2">
+            <div class="cities2" id="clock">
                 <div class="hov">
                      <img class="places" src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg" />
                         <div class="overlay">
@@ -79,92 +79,22 @@
                     <div class="overlay">
                         <div class="text">Bengaluru</div>
                       </div>
-                </div>  
-                
-              
-    </div>
-            <section id="viewmore">
-                <button type="button" class="btn btn-secondary"><a href="#" >View more</a></button>
+                </div>            
+            </div>
+            <section id="viewmore" >
+                <button class="btn btn-secondary" id="clockButton" onclick="toggleClock()">View more</button>
             </section>
     
-            <div class="footer">
-                        <section id="contactus">
-                            <button type="button" href="login.html" class="btn btn-info" data-toggle="modal" data-target="#contact">
-                                Contact
-                            </button>
-                        </section>
-         
-                        <section id="copy">
-                               <p>&copy 2020 ROOM Search PVT.LTD</p>
-                        </section>
-                         
-                        <section id="fit">
-                             <a href="https://www.facebook.com" target="_blank">
-                                 <img class="social" src="assests/images/facebook.png" />
-                              </a>
-                             <a href="https://www.instagram.com" target="_blank">
-                                 <img class="social" src="assests/images/instagram.png"/>
-                              </a>
-              
-                             <a href="https://www.twitter.com" target="_blank">
-                                 <img class="social" src="assests/images/twitter.png"/>
-                              </a> 
-                        </section>       
-            </div> 
+            <footer id="footer">
+               <!-- connected with commonjs                      -->               
+            </footer> 
        </div> 
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+              
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+              <script src="scripts/index.js"></script>
+              
 </body>
- <!-- Modal -->
- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Please login</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-            <form action="index.html" method="get">
-                <label for="username">Username:</label>
-                <input  name="username" type="text" required autocomplete="off" placeholder="Enter Username"/><br>
-                <label for="userpassword">Password:</label>
-                <input  name="userpassword" type="password" required placeholder="Enter Password"/><br>
-            </form>
-        </div>
-        <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-primary">Login</button>
-        </div>
-    </div>
-    </div>
-</div>
-
- <!-- Modal -->
- <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Get In Touch</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-
-            Thank you for reaching out!!!
-        </p>
-        <p>Please enter your email and we will get back to you.</p>
-        <form action="index.html">
-            <input type="email" required autocomplete="off" placeholder="Enter your email"/><br>
-        </form>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Submit</button>
-        </div>
-    </div>
-    </div>
-</div>
 </html>
 
 

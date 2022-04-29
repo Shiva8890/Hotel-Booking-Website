@@ -1,0 +1,3 @@
+function bookingSuccessfull(){
+    alert("succesfull");
+}

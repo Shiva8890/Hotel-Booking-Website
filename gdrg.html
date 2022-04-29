@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+<button onclick="getData()">click</button>
+<div id="data"></div>
+<script>
+
+    function getData(){
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET','https://jsonplaceholder.typicode.com/users');
+       
+    xhr.onload = () =>{
+
+        if(xhr.status==200){
+            let responseObj = xhr.response
+            document.getElementById('data').innerText = responseObj
+
+        }else{
+            console.log('Error')
+        }
+    }
+    xhr.send()
+
+    }
+</script>
+</body>
+</html>
