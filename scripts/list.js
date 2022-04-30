@@ -1,26 +1,26 @@
 let url = new URLSearchParams(location.search);
 
 //! To populate the HTML with new elements
-let listOfHotels = (list) => {
-   let listOfHotels = document.getElementById('list-view');
+let loh = (list) => {
+   let loh = document.getElementById('list-view');
 
    list.forEach(hotel => {
-      let hotelAnchorTag = document.createElement("a");
-      hotelAnchorTag.setAttribute("href", `detail.html?id=` + hotel.result_object.location_id);
-      listOfHotels.appendChild(hotelAnchorTag);
+      let hat = document.createElement("a");
+      hat.setAttribute("href", `detail.html?id=` + hotel.result_object.location_id);
+      loh.appendChild(hat);
 
-      let hotelContainer = document.createElement("div");
-      hotelContainer.setAttribute("class", "hotels-list");
-      hotelAnchorTag.appendChild(hotelContainer);
-      hotelContainer.innerHTML = "<img src=" + hotel.result_object.photo.images.small.url + " alt='" + hotel.result_object.name + "' class='hotel-image-small'/>";
+      let hc = document.createElement("div");
+      hc.setAttribute("class", "hotels-list");
+      hat.appendChild(hc);
+      hc.innerHTML = "<img src=" + hotel.result_object.photo.images.small.url + " alt='" + hotel.result_object.name + "' class='hotel-image-small'/>";
 
-      let hotelContent = document.createElement("div");
-      hotelContent.setAttribute("class", "hotel-content");
-      hotelContainer.appendChild(hotelContent);
+      let hContent = document.createElement("div");
+      hContent.setAttribute("class", "hotel-content");
+      hc.appendChild(hContent);
 
-      hotelContent.innerHTML = "<h3>" + hotel.result_object.name + "</h3>";
-      hotelContent.innerHTML += "<div id='rating'>" + hotel.result_object.rating + " <span class='fa fa-star checked'></span></div>";
-      hotelContent.innerHTML += "<p>" + hotel.result_object.address + "</p>";
+      hContent.innerHTML = "<h3>" + hotel.result_object.name + "</h3>";
+      hContent.innerHTML += "<div id='rating'>" + hotel.result_object.rating + " <span class='fa fa-star checked'></span></div>";
+      hContent.innerHTML += "<p>" + hotel.result_object.address + "</p>";
    });
 }
 
@@ -42,7 +42,7 @@ let sendHttpRequest = () => {
                + "\">Book Hotel</a>", element.result_object.latitude, element.result_object.longitude]);
          });
 
-         listOfHotels(list);
+         loh(list);
 
       }
    });
