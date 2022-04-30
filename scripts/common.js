@@ -1,11 +1,8 @@
-
-
 let headertag = ` <div class="header" ><a  href="index.html"><img class="logo" src="assests/images/logo.png" alt="logo" /></a>
                        <button type="button" id="loginButton" onclick="logout()" class="btn btn-light btn-sm" data-backdrop="false" data-toggle="modal" data-target="#loginModal">LOGIN
                        </button>
                         </div>
-
-    <!-- Modal -->
+     <!-- Modal -->
                     <div class="modal" tabindex="-1" id="loginModal">
                     <div class="modal-dialog">
                     <div class="modal-content">
@@ -130,3 +127,4 @@ function logout() {
     btn.innerText = "LOGIN";
     document.getElementById('payNowButton').disabled = true;
 }
+

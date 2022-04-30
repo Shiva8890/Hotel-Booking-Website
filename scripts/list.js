@@ -1,32 +1,59 @@
-// const data = null;
+let url = new URLSearchParams(location.search);
 
-function getData(){
+//! To populate the HTML with new elements
+let listOfHotels = (list) => {
+   let listOfHotels = document.getElementById('list-view');
 
-const xhr = new XMLHttpRequest()
-// xhr.withCredentials = true;
+   list.forEach(hotel => {
+      let hotelAnchorTag = document.createElement("a");
+      hotelAnchorTag.setAttribute("href", `detail.html?id=` + hotel.result_object.location_id);
+      listOfHotels.appendChild(hotelAnchorTag);
 
-// xhr.addEventListener("readystatechange", function () {
-// 	if (this.readyState === this.DONE) {
-// 		console.log(this.responseText);
-// 	}
-// });
+      let hotelContainer = document.createElement("div");
+      hotelContainer.setAttribute("class", "hotels-list");
+      hotelAnchorTag.appendChild(hotelContainer);
+      hotelContainer.innerHTML = "<img src=" + hotel.result_object.photo.images.small.url + " alt='" + hotel.result_object.name + "' class='hotel-image-small'/>";
 
-xhr.open("GET", "https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=eiffel%20tower&lang=en_US&units=km");
-// xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
-// xhr.setRequestHeader("X-RapidAPI-Key", "8280a48779msh4a285499a38ea63p129dd2jsn574cb7f9e919");
+      let hotelContent = document.createElement("div");
+      hotelContent.setAttribute("class", "hotel-content");
+      hotelContainer.appendChild(hotelContent);
 
-xhr.onload = () =>{
-
-    if(xhr.status == 200){
-
-        let responseObj = xhr.response
-        document.getElementById('listofhotels').innerHTML = responseObj
-    }
-    else {
-        console.log('Error')
-    }
-    
+      hotelContent.innerHTML = "<h3>" + hotel.result_object.name + "</h3>";
+      hotelContent.innerHTML += "<div id='rating'>" + hotel.result_object.rating + " <span class='fa fa-star checked'></span></div>";
+      hotelContent.innerHTML += "<p>" + hotel.result_object.address + "</p>";
+   });
 }
-xhr.send()
 
+//! HTTP request
+let sendHttpRequest = () => {
+   let xhr = new XMLHttpRequest();
+
+   xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === this.DONE) {
+         let result = JSON.parse(this.responseText).data;
+
+         let arr = [];
+         list = result.filter((element) => element.result_type == "lodging");
+
+         list.forEach((element) => {
+            arr.push([element.result_object.name
+               + "<br><a href=\"detail.html?id="
+               + element.result_object.location_id
+               + "\">Book Hotel</a>", element.result_object.latitude, element.result_object.longitude]);
+         });
+
+         listOfHotels(list);
+
+      }
+   });
+
+   xhr.open("GET", "https://travel-advisor.p.rapidapi.com/" + "locations/search?lang=en_US&limit=100&query=" + url.get('city'));
+   xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
+   xhr.setRequestHeader("x-rapidapi-key", "8280a48779msh4a285499a38ea63p129dd2jsn574cb7f9e919");
+
+   xhr.send();
 }
+
+sendHttpRequest();
+
+
